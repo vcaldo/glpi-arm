@@ -56,6 +56,6 @@ spec:
         - name: glpi
           mountPath: /var/www/html
       volumes:
-        - name: glpi-glpi
+        - name: glpi-vol
           persistentVolumeClaim:
             claimName: glpi-claim

@@ -38,6 +38,6 @@ spec:
         - name: mariadb
           mountPath: /var/lib/mysql
       volumes:
-        - name: glpi-mariadb
+        - name: mariadb-vol
           persistentVolumeClaim:
             claimName: mariadb-claim

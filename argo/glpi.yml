@@ -1,10 +1,10 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: GLPI
+  name: glpi
   namespace: argocd
 spec:
-  project: GLPI
+  project: default
   source:
     repoURL: https://github.com/vcaldo/glpi-arm.git
     targetRevision: argocd

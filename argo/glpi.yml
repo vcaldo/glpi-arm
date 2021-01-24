@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: GLPI
+  namespace: argocd
+spec:
+  project: GLPI
+  source:
+    repoURL: https://github.com/vcaldo/glpi-arm.git
+    targetRevision: argocd
+    path: argo/glpi
+    directory:
+      recurse: true
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: glpi
+  syncPolicy:
+    automated:
+      prune: false
+      selfHeal: false

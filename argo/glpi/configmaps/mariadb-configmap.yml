@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mariadb-config
+data:
+  MARIADB_DATABASE: glpi
+  MARIADB_PASSWORD: glpi-pass
+  MARIADB_USER: glpi-user
+  MYSQL_RANDOM_ROOT_PASSWORD: "True"
+  TZ: America/Sao_Paulo

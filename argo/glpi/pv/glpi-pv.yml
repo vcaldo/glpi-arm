@@ -6,9 +6,9 @@ spec:
   capacity:
     storage: 5Gi
   volumeMode: Filesystem
+  storageClassName: nfs
   accessModes:
     - ReadWriteMany
-    #- ReadWriteOnce
   mountOptions:
     - hard
     - nfsvers=4.0

@@ -3,8 +3,9 @@ kind: PersistentVolumeClaim
 metadata:
   name: glpi-glpi
 spec:
+  storageClassName: nfs
   accessModes:
-    - ReadWriteMany
+    - ReadWriteOnce
   resources:
     requests:
       storage: 5Gi

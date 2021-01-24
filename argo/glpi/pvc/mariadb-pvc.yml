@@ -3,8 +3,9 @@ kind: PersistentVolumeClaim
 metadata:
   name: glpi-mariadb
 spec:
+  storageClassName: nfs
   accessModes:
-    - ReadWriteMany
+    - ReadWriteOnce
   resources:
     requests:
       storage: 10Gi

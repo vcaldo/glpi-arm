@@ -37,7 +37,7 @@ spec:
             memory: "512Mi"
             cpu: "500m"
         volumeMounts:
-        - name: glpi
+        - name: glpi-glpi
           mountPath: /var/www/html
       - name: cron
         image: vcaldo/glpi:glpi-cron-9.5.1
@@ -53,7 +53,7 @@ spec:
             memory: "512Mi"
             cpu: "500m"
         volumeMounts:
-        - name: glpi
+        - name: glpi-glpi
           mountPath: /var/www/html
       - name: mariadb
         image: vcaldo/glpi:glpi-mariadb-10.3
@@ -69,12 +69,12 @@ spec:
             memory: "512Mi"
             cpu: "500m"
         volumeMounts:
-        - name: mariadb
+        - name: glpi-mariadb
           mountPath: /var/lib/mysql
       volumes:
-        - name: mariadb
+        - name: glpi-mariadb
           persistentVolumeClaim:
             claimName: glpi-mariadb
-        - name: glpi
+        - name: glpi-glpi
           persistentVolumeClaim:
             claimName: glpi-glpi

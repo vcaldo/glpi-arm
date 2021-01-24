@@ -7,8 +7,8 @@ spec:
     storage: 10Gi
   volumeMode: Filesystem
   accessModes:
-    #- ReadWriteMany
-    - ReadWriteOnce
+    - ReadWriteMany
+    #- ReadWriteOnce
   mountOptions:
     - hard
     - nfsvers=4.0

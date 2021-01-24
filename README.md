@@ -1,7 +1,7 @@
 # GLPI Docker - ARM Build
 This is a [GLPI](https://github.com/glpi-project/glpi) ARM build.
 ## Build
-You can build any GLPI or MariaDB version setting the build-arg as the example below.
+There are pre-build images for arm64 at my [Docker Hub repo](https://hub.docker.com/repository/docker/vcaldo/glpi), but you can build any GLPI or MariaDB version setting the build-arg as the example below.
 
 ```
 docker build --build-arg VERSION=9.5.3 -t local/glpi glpi

@@ -1,4 +1,4 @@
-FROM ubuntu
+FROM ubuntu:20.04
 
 ARG VERSION
 ENV MARIADB_HOST mariadb-glpi

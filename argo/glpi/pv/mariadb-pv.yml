@@ -4,9 +4,9 @@ metadata:
   name: glpi-mariadb
 spec:
   capacity:
-    storage: 10Gi
+    storage: 5Gi
   volumeMode: Filesystem
-  storageClassName: nfs-db
+  #storageClassName: nfs-db
   accessModes:
     - ReadWriteOnce
   mountOptions:

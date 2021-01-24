@@ -7,5 +7,5 @@ spec:
     app: glpi-stack
   ports:
     - protocol: TCP
-      port: 80
+      port: 5888
       targetPort: 5000

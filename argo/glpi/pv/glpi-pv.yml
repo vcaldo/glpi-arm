@@ -4,9 +4,9 @@ metadata:
   name: glpi-glpi
 spec:
   capacity:
-    storage: 3Gi
+    storage: 5Gi
   volumeMode: Filesystem
-  #storageClassName: nfs
+  storageClassName: manual
   accessModes:
     - ReadWriteMany
   mountOptions:

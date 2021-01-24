@@ -6,7 +6,7 @@ spec:
   capacity:
     storage: 5Gi
   volumeMode: Filesystem
-  #storageClassName: nfs-db
+  storageClassName: manual
   accessModes:
     - ReadWriteMany
   mountOptions:

@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: glpi-mariadb
+  name: mariadb-claim
 spec:
-  #storageClassName: nfs-db
+  storageClassName: manual
   accessModes:
     - ReadWriteMany
   resources:

@@ -1,0 +1,10 @@
+<IfModule mod_authz_core.c>
+    Require local
+</IfModule>
+<IfModule !mod_authz_core.c>
+    order deny, allow
+    deny from all
+    allow from 127.0.0.1
+    allow from ::1
+</IfModule>
+ErrorDocument 403 "<p><b>Restricted area.</b><br />Only local access allowed.<br />To migrate or install a database use GLPI cli.<br><pre>php bin/console db:update</pre>or<pre>php bin/console db:install</pre></p>"

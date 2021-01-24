@@ -1,0 +1,42 @@
+version: '2'
+services:
+
+  mariadb-glpi:
+    image: local/glpi-mariadb
+    hostname: mariadb-glpi
+    container_name: mariadb-glpi
+    environment:
+      MARIADB_DATABASE: glpi
+      MARIADB_PASSWORD: glpi-pass
+      MARIADB_USER: glpi-user
+      MYSQL_RANDOM_ROOT_PASSWORD: "True"
+      TZ: America/Sao_Paulo
+    volumes:
+    - mariadb:/var/lib/mysql
+
+  glpi:
+    image: local/glpi
+    hostname: glpi
+    container_name: glpi
+    #user: '0'
+    environment:
+      TZ: America/Sao_Paulo
+      GLPI_LANG: pt_BR
+    volumes:
+      - glpi:/var/www/html
+    ports:
+      - 8080:80
+
+  crond:
+    image: local/glpi-cron
+    hostname: cron
+    container_name: cron
+    #user: '0'
+    environment:
+      TZ: America/Sao_Paulo
+    volumes:
+      - glpi:/var/www/html
+
+volumes:
+  mariadb:
+  glpi:

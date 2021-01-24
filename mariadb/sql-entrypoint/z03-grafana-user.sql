@@ -1,0 +1,4 @@
+USE mysql;
+CREATE USER 'grafana'@'%' IDENTIFIED BY 'EMhm6G4EX2p2BWnj7k8d4';
+GRANT SELECT ON glpi.* TO 'grafana'@'%';
+FLUSH PRIVILEGES;

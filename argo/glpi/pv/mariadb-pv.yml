@@ -6,9 +6,13 @@ spec:
   capacity:
     storage: 5Gi
   volumeMode: Filesystem
-  storageClassName: manual
+  storageClassName: nfs
   accessModes:
     - ReadWriteMany
+  persistentVolumeReclaimPolicy: Retain
+  claimRef:
+    namespace: glpi
+    name: mariadb-claim
   mountOptions:
     - hard
     - nfsvers=4.0

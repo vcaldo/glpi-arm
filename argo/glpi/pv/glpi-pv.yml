@@ -4,11 +4,15 @@ metadata:
   name: glpi-glpi
 spec:
   capacity:
-    storage: 5Gi
+    storage: 3Gi
   volumeMode: Filesystem
-  storageClassName: manual
+  storageClassName: ""
   accessModes:
     - ReadWriteMany
+  persistentVolumeReclaimPolicy: Retain
+  claimRef:
+    namespace: glpi
+    name: glpi-claim
   mountOptions:
     - hard
     - nfsvers=4.0

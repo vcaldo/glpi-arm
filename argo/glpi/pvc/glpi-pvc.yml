@@ -3,9 +3,9 @@ kind: PersistentVolumeClaim
 metadata:
   name: glpi-claim
 spec:
-  storageClassName: manual
+  storageClassName: ""
   accessModes:
     - ReadWriteMany
   resources:
     requests:
-      storage: 5Gi
+      storage: 3Gi

@@ -3,7 +3,7 @@ kind: PersistentVolumeClaim
 metadata:
   name: mariadb-claim
 spec:
-  storageClassName: nfs
+  #storageClassName: nfs
   accessModes:
     - ReadWriteMany
   resources:

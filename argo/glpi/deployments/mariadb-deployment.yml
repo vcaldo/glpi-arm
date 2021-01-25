@@ -35,7 +35,7 @@ spec:
             memory: "256Mi"
             cpu: "500m"
         volumeMounts:
-        - name: mariadb
+        - name: mariadb-vol
           mountPath: /var/lib/mysql
       volumes:
         - name: mariadb-vol

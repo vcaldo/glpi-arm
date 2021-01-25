@@ -27,6 +27,8 @@ spec:
         envFrom:
           - configMapRef:
               name: mariadb-configmap
+        ports:
+        - containerPort: 3306
         resources:
           requests:
             memory: "128Mi"

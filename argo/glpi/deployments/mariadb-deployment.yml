@@ -24,9 +24,9 @@ spec:
       - name: mariadb
         image: vcaldo/glpi:glpi-mariadb-10.4
         imagePullPolicy: Always
-        securityContext:
-          allowPrivilegeEscalation: false
-          runAsUser: 0
+        # securityContext:
+        #   allowPrivilegeEscalation: false
+        #   runAsUser: 0
         envFrom:
           - configMapRef:
               name: mariadb-configmap

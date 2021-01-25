@@ -6,7 +6,6 @@ spec:
   capacity:
     storage: 3Gi
   volumeMode: Filesystem
-  #storageClassName: nfs
   accessModes:
     - ReadWriteMany
   persistentVolumeReclaimPolicy: Retain

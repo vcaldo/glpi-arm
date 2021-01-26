@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/vcaldo/glpi-arm.git
     targetRevision: argocd
-    path: argo/glpi
+    path: argo/manifests
     directory:
       recurse: true
   destination:

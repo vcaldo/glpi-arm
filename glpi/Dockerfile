@@ -38,6 +38,8 @@ RUN apt -y update \
 		git \
 		bzip2 \
 		unzip \
+    iputils-ping \
+    telnet \
     && rm -rf /var/lib/apt/lists/*
 
 ADD https://github.com/glpi-project/glpi/releases/download/${VERSION}/glpi-${VERSION}.tgz /tmp/

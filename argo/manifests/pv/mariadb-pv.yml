@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: glpi-mariadb
+spec:
+  capacity:
+    storage: 5Gi
+  volumeMode: Filesystem
+  accessModes:
+    - ReadWriteMany
+  persistentVolumeReclaimPolicy: Retain
+  claimRef:
+    namespace: glpi
+    name: mariadb-claim
+  mountOptions:
+    - hard
+    - nfsvers=4.0
+  nfs:
+    path: /k3s/glpi/mariadb
+    server: 192.168.1.2

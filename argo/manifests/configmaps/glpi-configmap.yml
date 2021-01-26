@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: glpi-configmap
+data:
+  TZ: America/Sao_Paulo
+  GLPI_LANG: pt_BR
+  MARIADB_HOST: MARIADB_GLPI_PORT_3306_TCP_ADDR
+  MARIADB_PORT: 3306
+  MARIADB_DATABASE: glpi
+  MARIADB_USER: glpi-user
+  MARIADB_PASSWORD: glpi-pass
+  TIMEZONE: America/Sao_Paulo

@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mariadb
+  labels:
+    app: glpi-stack
+  annotations:
+spec:
+  selector:
+    matchLabels:
+      app: glpi-stack
+  replicas: 3
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+  template:
+    metadata:
+      labels:
+        app: glpi-stack
+    spec:
+      containers:
+      - name: mariadb
+        image: vcaldo/glpi:glpi-mariadb-10.5
+        imagePullPolicy: Always
+        envFrom:
+          - configMapRef:
+              name: mariadb-configmap
+        ports:
+        - containerPort: 3306
+        resources:
+          requests:
+            memory: "128Mi"
+            cpu: "50m"
+          limits:
+            memory: "256Mi"
+            cpu: "500m"
+        volumeMounts:
+        - name: mariadb-vol
+          mountPath: /var/lib/mysql
+      volumes:
+        - name: mariadb-vol
+          persistentVolumeClaim:
+            claimName: mariadb-claim

@@ -9,7 +9,7 @@ spec:
   selector:
     matchLabels:
       app: glpi-stack
-  replicas: 2
+  replicas: 3
   strategy:
     type: RollingUpdate
     rollingUpdate:

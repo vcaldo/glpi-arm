@@ -1,4 +1,5 @@
-FROM local/glpi
+ARG VERSION
+FROM vcaldo/glpi:glpi-${VERSION}
 
 RUN apt update && \
     apt -y install cron mariadb-client \

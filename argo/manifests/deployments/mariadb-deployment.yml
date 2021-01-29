@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
       - name: mariadb
-        image: vcaldo/glpi:glpi-mariadb-10.5
+        image: vcaldo/glpi:mariadb-10.5
         imagePullPolicy: Always
         envFrom:
           - configMapRef:

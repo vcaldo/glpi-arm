@@ -40,7 +40,7 @@ spec:
         - name: glpi-vol
           mountPath: /var/www/html
       - name: cron
-        image: vcaldo/glpi:glpi-cron-9.5.2
+        image: vcaldo/glpi:cron-9.5.2
         imagePullPolicy: Always
         envFrom:
           - configMapRef:

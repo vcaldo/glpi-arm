@@ -18,7 +18,7 @@ spec:
   template:
     metadata:
       labels:
-        app: glpi-stack
+        app: glpi
     spec:
       containers:
       - name: glpi

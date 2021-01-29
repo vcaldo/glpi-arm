@@ -4,7 +4,7 @@ metadata:
   name: glpi-service
 spec:
   selector:
-    app: glpi-stack
+    app: glpi
   ports:
     - protocol: TCP
       port: 8080

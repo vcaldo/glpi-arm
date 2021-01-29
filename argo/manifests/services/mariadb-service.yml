@@ -4,7 +4,7 @@ metadata:
   name: mariadb-glpi
 spec:
   selector:
-    app: glpi-stack
+    app: mariadb
   ports:
     - protocol: TCP
       port: 3306

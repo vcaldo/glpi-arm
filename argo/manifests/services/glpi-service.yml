@@ -5,7 +5,7 @@ metadata:
   namespace: glpi
 spec:
   selector:
-    app: glpi
+    app: glpi-app
   ports:
     - protocol: TCP
       port: 8080

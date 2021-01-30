@@ -31,8 +31,8 @@ spec:
         - containerPort: 80
         resources:
           requests:
-            memory: "256Mi"
-            cpu: "500m"
+            memory: "128Mi"
+            cpu: "50m"
           limits:
             memory: "128Mi"
             cpu: "100m"
@@ -47,10 +47,10 @@ spec:
         #       name: glpi-configmap
         resources:
           requests:
-            memory: "64Mi"
+            memory: "128Mi"
             cpu: "50m"
           limits:
-            memory: "96Mi"
+            memory: "128Mi"
             cpu: "100m"
         volumeMounts:
         - name: glpi-vol

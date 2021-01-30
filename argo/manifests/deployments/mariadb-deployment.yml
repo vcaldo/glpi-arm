@@ -8,7 +8,7 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: glpi-stack
+      app: mariadb
   replicas: 1
   strategy:
     type: RollingUpdate

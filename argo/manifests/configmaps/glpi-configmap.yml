@@ -10,4 +10,3 @@ data:
   MARIADB_DATABASE: glpi
   MARIADB_USER: glpi-user
   MARIADB_PASSWORD: glpi-pass
-  TIMEZONE: America/Sao_Paulo

@@ -6,6 +6,5 @@ data:
   MARIADB_DATABASE: glpi
   MARIADB_PASSWORD: glpi-pass
   MARIADB_USER: glpi-user
-  #MYSQL_RANDOM_ROOT_PASSWORD: "True"
   MYSQL_ROOT_PASSWORD: vFSWfEwEvpHZG633w
   TZ: America/Sao_Paulo

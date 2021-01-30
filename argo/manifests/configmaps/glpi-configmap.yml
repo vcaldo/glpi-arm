@@ -2,6 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: glpi-configmap
+  namespace: glpi
 data:
   TZ: America/Sao_Paulo
   GLPI_LANG: pt_BR

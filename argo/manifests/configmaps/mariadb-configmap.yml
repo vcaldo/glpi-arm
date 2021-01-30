@@ -2,6 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: mariadb-configmap
+  namespace: glpi
 data:
   MARIADB_DATABASE: glpi
   MARIADB_PASSWORD: glpi-pass

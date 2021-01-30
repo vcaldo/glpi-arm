@@ -3,12 +3,12 @@ kind: Deployment
 metadata:
   name: glpi
   labels:
-    app: glpi-stack
+    app: glpi
   annotations:
 spec:
   selector:
     matchLabels:
-      app: glpi-app
+      app: glpi
   replicas: 1
   strategy:
     type: RollingUpdate
@@ -18,7 +18,7 @@ spec:
   template:
     metadata:
       labels:
-        app: glpi-app
+        app: glpi
     spec:
       containers:
       - name: glpi

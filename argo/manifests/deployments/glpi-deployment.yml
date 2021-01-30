@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
       - name: glpi
-        image: vcaldo/glpi:glpi-9.5.2
+        image: vcaldo/glpi:glpi-9.5.3
         imagePullPolicy: Always
         envFrom:
           - configMapRef:
@@ -40,7 +40,7 @@ spec:
         - name: glpi-vol
           mountPath: /var/www/html
       - name: cron
-        image: vcaldo/glpi:cron-9.5.2
+        image: vcaldo/glpi:cron-9.5.3
         imagePullPolicy: Always
         # envFrom:
         #   - configMapRef:

@@ -2,9 +2,10 @@ apiVersion: v1
 kind: Service
 metadata:
   name: glpi-service
+  namespace: glpi
 spec:
   selector:
-    app: glpi-app
+    app: glpi
   ports:
     - protocol: TCP
       port: 8080

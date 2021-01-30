@@ -42,9 +42,9 @@ spec:
       - name: cron
         image: vcaldo/glpi:cron-9.5.2
         imagePullPolicy: Always
-        envFrom:
-          - configMapRef:
-              name: glpi-configmap
+        # envFrom:
+        #   - configMapRef:
+        #       name: glpi-configmap
         resources:
           requests:
             memory: "64Mi"

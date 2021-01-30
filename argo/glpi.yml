@@ -16,5 +16,5 @@ spec:
     namespace: glpi
   syncPolicy:
     automated:
-      prune: false
+      prune: true
       selfHeal: false
